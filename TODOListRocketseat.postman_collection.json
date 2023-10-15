@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "553bbf5c-346f-4f04-874d-ad6b8f138c07",
+		"name": "TODOListRocketseat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "22768891",
+		"_collection_link": "https://www.postman.com/aerospace-cosmologist-68634263/workspace/vale/collection/22768891-553bbf5c-346f-4f04-874d-ad6b8f138c07?action=share&source=collection_link&creator=22768891"
+	},
+	"item": [
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"Gabriel Barros\",\r\n    \"name\":\"Gabriel\",\r\n    \"password\":\"myPass\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Task",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "Gabriel Barros",
+						"password": "myPass"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"description\",\r\n    \"title\": \"ondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescriptiondescripti\",\r\n    \"priority\": \"HIGH\",\r\n    \"startAt\": \"2023-10-15T00:00:00\",\r\n    \"endAt\": \"2023-10-15T03:46:10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "Find All Tasks By User",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "Gabriel Barros",
+						"password": "myPass"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Task Partially",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "Gabriel Barros",
+						"password": "myPass"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"titulo atualizado\",\r\n    \"priority\":\"LOW\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/tasks/bcafd26e-eec3-4645-aec2-471a646268b0\t"
+			},
+			"response": []
+		}
+	]
+}
